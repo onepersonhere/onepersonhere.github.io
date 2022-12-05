@@ -40,3 +40,17 @@ body {
   max-height: 200px;
 }
 
+.organization {
+  font-size: .85em;
+  background-color: var(--bs-info);
+  display: inline-block;
+  color: var(--bs-white);
+  padding: 2px 8px;
+  border-radius: 2em;
+}
+
+a {
+  outline: none !important;
+  box-shadow: none;
+}
+
