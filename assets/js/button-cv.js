@@ -1,3 +1,12 @@
+function httpGet(url)
+{
+    async function fetchAsync (url) {
+      let response = await fetch(url);
+      let data = await response.json();
+      return data;
+    }
+}
+
 (function() {
   // Load the script
   const script = document.createElement("script");
@@ -8,7 +17,7 @@
     
     var counter = 0
     $("#button-cv").on("click", function(){
-        window.alert(++counter)
+        window.alert(httpGet("https://www.example.org/"))
     })
   });
   document.head.appendChild(script);
