@@ -9,6 +9,9 @@ body {
   --bs-body-color: var(--bs-white);
   --bs-body-bg: var(--bs-dark);
   --bs-body-font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .container {
