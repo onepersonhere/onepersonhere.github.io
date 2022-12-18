@@ -864,3 +864,23 @@ To https://github.com/onepersonhere/onepersonhere.github.io.git
    4b1a8c6..ae072bc  main -> main
 
 
+----------
+
+Sun Dec 18 2022 17:12:34 GMT+0800 (Singapore Standard Time)
+
+To https://github.com/onepersonhere/onepersonhere.github.io.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/onepersonhere/onepersonhere.github.io.git'
+
+
+----------
+
+Sun Dec 18 2022 17:12:34 GMT+0800 (Singapore Standard Time)
+
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
