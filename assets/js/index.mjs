@@ -40,17 +40,17 @@ async function main() {
         const counterRef = doc(db, "count", "count")
         const counterSnap = await getDoc(counterRef);
         const curr_count = counterSnap.data().count;
+        
         await updateDoc(counterRef, {
           count: curr_count + 1
         });
 
-        var geo_data, ip;
         await $.getJSON('https://api.ipdata.co?api-key=' + apiKey, function(data) {
-            ip = data["ip"];
-            geo_data = data;
+            const geoRef = doc(db, "ip", data["ip"]);
+            setDoc(geoRef, data);
+            console.log("Document written with ID: " +  data["ip"]);
         });
-        const geoRef = doc(db, "ip", ip);
-        await setDoc(geoRef, geo_data);
+        location.href = "cv.html";
     })
   } catch (e) {
     console.log(e);
