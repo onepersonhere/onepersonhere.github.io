@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WorkExperience: React.FC = () => (
-    <section style={{ paddingTop: '6px' }}>
+    <section className="section" style={{ paddingTop: '6px' }}>
         <div className="container">
             <h1>Work Experience</h1>
             <div data-aos="fade-right">

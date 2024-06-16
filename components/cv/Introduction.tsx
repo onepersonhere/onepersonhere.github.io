@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Introduction: React.FC = () => (
-    <section>
+    <section className="section">
         <div className="container">
             <div className="row row-cols-sm-2 row-cols-md-2">
                 <div className="col-auto col-md-6">
