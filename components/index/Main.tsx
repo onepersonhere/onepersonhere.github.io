@@ -1,5 +1,6 @@
 // components/Main.js
 import React from 'react';
+import Link from "next/link";
 
 const Main = () => {
     return (
@@ -33,9 +34,11 @@ const Main = () => {
                 <div className="container">
                     <div data-aos="fade-up" className="banner">
                         <p className="fs-1"><strong>Curriculum Vitae</strong><br /></p>
-                        <button className="btn btn-dark btn-lg text-uppercase fw-bold" data-bss-hover-animate="pulse" id="button-cv" type="button">
-                            Vide illud <i className="fas fa-chevron-right"></i>
-                        </button>
+                        <Link href="/cv">
+                            <button className="btn btn-dark btn-lg text-uppercase fw-bold" data-bss-hover-animate="pulse" id="button-cv" type="button" >
+                                Vide illud <i className="fas fa-chevron-right"></i>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>
