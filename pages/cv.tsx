@@ -7,8 +7,9 @@ import Introduction from '../components/cv/Introduction';
 import WorkExperience from '../components/cv/Work';
 import Education from '../components/cv/Education';
 import Projects from '../components/cv/Projects';
-import Skills from '../components/cv/Skills'; // Uncomment when you create this component
-import Hackathons from '../components/cv/Hackathons'; // Uncomment when you create this component
+import Skills from '../components/cv/Skills';
+import Hackathons from '../components/cv/Hackathons';
+import OtherActivity from '../components/cv/Others';
 
 const CV: React.FC = () => {
     useEffect(() => {
@@ -25,6 +26,7 @@ const CV: React.FC = () => {
                 <Projects />
                 <Skills />
                 <Hackathons />
+                <OtherActivity />
             </main>
             <Footer />
         </div>

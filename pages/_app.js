@@ -15,8 +15,8 @@ import AOS from 'aos';
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
         AOS.init();
+        import('bootstrap/dist/js/bootstrap.bundle.min.js');
     }, []);
-
     return <Component {...pageProps} />;
 }
 
