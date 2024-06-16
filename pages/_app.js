@@ -1,4 +1,3 @@
-// pages/_app.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'aos/dist/aos.css';
@@ -15,8 +14,10 @@ import AOS from 'aos';
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
         AOS.init();
+        import('jquery/dist/jquery.min.js')
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
     }, []);
+
     return <Component {...pageProps} />;
 }
 
