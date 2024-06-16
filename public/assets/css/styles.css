@@ -1,0 +1,59 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  --bs-primary: #1c3dca;
+  --bs-primary-rgb: 28,61,202;
+  --bs-info: #02aaff;
+  --bs-info-rgb: 2,170,255;
+  --bs-dark: #131416;
+  --bs-dark-rgb: 19,20,22;
+  --bs-body-color: var(--bs-white);
+  --bs-body-bg: var(--bs-dark);
+  --bs-body-font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  max-width: 960px;
+}
+
+.text-badge {
+  padding: .1em .4em;
+  background: var(--bs-dark);
+}
+
+.banner {
+  padding: 2em 1em;
+  text-align: center;
+  background: var(--bs-primary);
+  border-radius: 1em;
+}
+
+.projects {
+  --bs-gutter-y: 1.5rem;
+}
+
+.card-img {
+  object-fit: cover;
+  min-height: 200px;
+  object-position: center;
+  width: 100%;
+  max-height: 200px;
+}
+
+.organization {
+  font-size: .85em;
+  background-color: var(--bs-info);
+  display: inline-block;
+  color: var(--bs-white);
+  padding: 2px 8px;
+  border-radius: 2em;
+}
+
+a {
+  outline: none !important;
+  box-shadow: none;
+}
+

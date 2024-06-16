@@ -1,0 +1,10 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+/* Change the tooltip background color */
+
+.tooltip-inner {
+  color: white;
+}
+
