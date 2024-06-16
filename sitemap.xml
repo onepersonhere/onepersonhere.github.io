@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>/blog/blog.html</loc>
+        <loc>https://onepersonhere.github.io/blog/blog.html</loc>
     </url>
     <url>
-        <loc>/blog/blog-2.html</loc>
+        <loc>https://onepersonhere.github.io/blog/blog-2.html</loc>
     </url>
     <url>
-        <loc>/notes/notes.html</loc>
+        <loc>https://onepersonhere.github.io/game/brick_breaker.html</loc>
     </url>
     <url>
-        <loc>/notes/notes-2.html</loc>
+        <loc>https://onepersonhere.github.io/notes/notes.html</loc>
     </url>
     <url>
-        <loc>/notes/notes-3.html</loc>
+        <loc>https://onepersonhere.github.io/notes/notes-2.html</loc>
     </url>
     <url>
-        <loc>/notes/notes-4.html</loc>
+        <loc>https://onepersonhere.github.io/notes/notes-3.html</loc>
     </url>
     <url>
-        <loc>/cv.html</loc>
+        <loc>https://onepersonhere.github.io/notes/notes-4.html</loc>
     </url>
     <url>
-        <loc>/</loc>
+        <loc>https://onepersonhere.github.io/cv.html</loc>
     </url>
     <url>
-        <loc>/photos.html</loc>
+        <loc>https://onepersonhere.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://onepersonhere.github.io/photos.html</loc>
     </url>
 </urlset>
