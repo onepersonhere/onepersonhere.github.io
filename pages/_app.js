@@ -9,13 +9,39 @@ import '../public/assets/css/styles.css';
 import '../styles/globals.css';
 
 import { useEffect } from 'react';
-import AOS from 'aos';
 
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
-        AOS.init();
-        import('jquery/dist/jquery.min.js')
-        import('bootstrap/dist/js/bootstrap.bundle.min.js');
+        const loadScript = async (src) => {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.body.appendChild(script);
+            });
+        };
+
+        const loadScripts = async () => {
+            try {
+                await loadScript("https://code.jquery.com/jquery-3.6.0.min.js");
+                await loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js");
+                await loadScript("/assets/js/aos.min.js");
+                await loadScript("/assets/js/bs-init.js");
+                await loadScript("/assets/js/button-cv.js");
+
+                const script = document.createElement('script');
+                script.src = "/assets/js/index.mjs";
+                script.type = "module";
+                document.body.appendChild(script);
+
+                await loadScript("/assets/js/theme.js");
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        loadScripts();
     }, []);
 
     return <Component {...pageProps} />;
