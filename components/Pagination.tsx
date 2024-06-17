@@ -1,13 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
-interface PaginationProps {
-    previousLink?: string;
-    nextLink?: string;
-    currentPage: number;
-    totalPages: number;
-    href: string;
-}
+import { PaginationProps } from '@/types/PaginationProps';
 
 const Pagination: React.FC<PaginationProps> = ({ previousLink, nextLink, currentPage, totalPages, href }) => {
     const pageNumbers = [];

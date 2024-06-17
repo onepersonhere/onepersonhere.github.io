@@ -4,13 +4,7 @@ import Footer from '../../components/Footer';
 import BlogPost from '../../components/blog/BlogPost';
 import Pagination from '../../components/Pagination';
 import {useRouter} from "next/router";
-
-interface BlogStruct {
-    title: string;
-    date: string;
-    content: string;
-    imageSrc?: string;
-}
+import {BlogStruct} from "@/types/Blog/BlogStruct";
 
 const blog1: BlogStruct = {
     title: "Hello World",

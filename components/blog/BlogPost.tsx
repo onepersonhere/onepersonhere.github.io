@@ -1,11 +1,5 @@
 import React from 'react';
-
-interface BlogPostProps {
-    title: string;
-    date: string;
-    content: string;
-    imageSrc?: string;
-}
+import {BlogPostProps} from "@/types/Blog/BlogPostProps";
 
 const BlogPost: React.FC<BlogPostProps> = ({ title, date, content, imageSrc }) => {
     return (

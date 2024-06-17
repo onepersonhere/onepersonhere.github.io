@@ -4,7 +4,6 @@ import Main from '../components/index/Main';
 import Footer from '../components/Footer';
 
 import React, { useEffect } from 'react';
-// @ts-ignore
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

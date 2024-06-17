@@ -11,6 +11,7 @@ import '../styles/globals.css';
 import React, { useEffect } from 'react';
 import Head from "next/head";
 
+// eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
         const loadScript = async (src) => {

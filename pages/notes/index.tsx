@@ -5,15 +5,7 @@ import NoteCard from "@/components/notes/NoteCard";
 import NotesSection from "../../components/notes/NoteSection";
 import {useRouter} from "next/router";
 import React from "react";
-
-interface NoteStruct {
-    title: string;
-    grade?: string;
-    review: string;
-    link?: string;
-    rating: number;
-    expanded?: boolean;
-}
+import {NoteStruct} from "@/types/Notes/NoteStruct";
 
 const notes1: NoteStruct[] = [
     {
