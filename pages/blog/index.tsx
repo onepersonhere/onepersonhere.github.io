@@ -5,14 +5,14 @@ import BlogPost from '../../components/blog/BlogPost';
 import Pagination from '../../components/Pagination';
 import {useRouter} from "next/router";
 
-interface Blog {
+interface BlogStruct {
     title: string;
     date: string;
     content: string;
     imageSrc?: string;
 }
 
-const blog1: Blog = {
+const blog1: BlogStruct = {
     title: "Hello World",
     date: "5 December 2022",
     content: `
@@ -23,7 +23,7 @@ const blog1: Blog = {
     imageSrc: "/assets/img/Blog/Hello%20World%20(2).gif"
 };
 
-const blog2: Blog = {
+const blog2: BlogStruct = {
     title: "Modreg Day",
     date: "6 December 2022",
     content: `
@@ -33,7 +33,7 @@ const blog2: Blog = {
     `
 };
 
-const blogs: Blog[] = [blog1, blog2];
+const blogs: BlogStruct[] = [blog1, blog2];
 
 const Blog: React.FC = () => {
     const router = useRouter();

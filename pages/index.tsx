@@ -1,5 +1,4 @@
 // pages/index.js
-import Head from 'next/head';
 import Header from '../components/index/Header';
 import Main from '../components/index/Main';
 import Footer from '../components/Footer';

@@ -4,8 +4,9 @@ import Pagination from '../../components/Pagination';
 import NoteCard from "@/components/notes/NoteCard";
 import NotesSection from "../../components/notes/NoteSection";
 import {useRouter} from "next/router";
+import React from "react";
 
-interface Note {
+interface NoteStruct {
     title: string;
     grade?: string;
     review: string;
@@ -14,7 +15,7 @@ interface Note {
     expanded?: boolean;
 }
 
-const notes1: Note[] = [
+const notes1: NoteStruct[] = [
     {
         title: 'CS1101S Programming Methodology',
         grade: 'A',
@@ -65,7 +66,7 @@ const notes1: Note[] = [
         rating: 5,
     },
 ];
-const notes2: Note[] = [
+const notes2: NoteStruct[] = [
     {
         title: 'CS2030S Programming Methodology II',
         grade: 'A-',
@@ -106,7 +107,7 @@ const notes2: Note[] = [
         rating: 3,
     }
 ];
-const notes3: Note[] = [
+const notes3: NoteStruct[] = [
     {
         title: 'CP2106 Independent Software Development Project (Orbital)',
         grade: 'CS (Artemis)',
@@ -118,7 +119,7 @@ const notes3: Note[] = [
         expanded: true,
     }
 ]
-const notes4: Note[] = [
+const notes4: NoteStruct[] = [
     {
         title: 'CS2103T Software Engineering',
         review: `<p>I would say this module is pretty easy. I misjudged the difficulty when I started the mod, especially with the IP (Individual Project), in which I put in many of my hours unnecessarily. However, after we proceeded to TP (Team Project), I laid back more as we equally divided the workload to each member.</p>

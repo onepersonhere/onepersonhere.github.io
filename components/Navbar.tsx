@@ -1,21 +1,32 @@
 import React from 'react';
+import Link from "next/link";
 
 const Navbar: React.FC<{caller: string}> = ({caller}) => {
     return (
         <nav className="navbar navbar-expand-md sticky-top bg-dark py-3 navbar-dark">
             <div className="container">
-                <a className="navbar-brand d-flex align-items-center" data-bss-hover-animate="pulse"
-                   href="/">
-            <span
-                className="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
-                   className="bi bi-brightness-high-fill">
-                <path
-                    d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
-              </svg>
-            </span>
-                    <span>onepersonhere</span>
-                </a>
+                <Link href="/" legacyBehavior>
+                    <a className="navbar-brand d-flex align-items-center" data-bss-hover-animate="pulse">
+                        <span className="bs-icon-sm
+                            bs-icon-rounded
+                            bs-icon-primary
+                            d-flex
+                            justify-content-center
+                            align-items-center
+                            me-2
+                            bs-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                               width="1em"
+                               height="1em"
+                               fill="currentColor"
+                               viewBox="0 0 16 16"
+                               className="bi bi-brightness-high-fill">
+                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                          </svg>
+                        </span>
+                        <span>onepersonhere</span>
+                    </a>
+                </Link>
                 <button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-5">
                     <span className="visually-hidden">Toggle navigation</span>
                     <span className="navbar-toggler-icon"></span>
@@ -23,23 +34,23 @@ const Navbar: React.FC<{caller: string}> = ({caller}) => {
                 <div className="collapse navbar-collapse" id="navcol-5">
                     <ul className="navbar-nav ms-auto">
                         { caller != "blog"
-                            ? <li className="nav-item"><a className="nav-link active" href="/blog">Blog</a></li>
-                            : <li className="nav-item"><a className="nav-link active" href="/photos">Photos</a></li>
+                            ? <li className="nav-item"><Link href={"/blog"} legacyBehavior><a className="nav-link active">Blog</a></Link></li>
+                            : <li className="nav-item"><Link href={"/photos"} legacyBehavior><a className="nav-link active">Photos</a></Link></li>
                         }
                         {caller != "photos" && caller != "blog"
-                            ? <li className="nav-item"><a className="nav-link" href="/photos">Photos</a></li>
+                            ? <li className="nav-item"><Link href={"/photos"} legacyBehavior><a className="nav-link">Photos</a></Link></li>
                             : <></>
                         }
                         {caller != "cv"
-                            ? <li className="nav-item"><a className="nav-link" href="/cv">CV</a></li>
+                            ? <li className="nav-item"><Link href={"/cv"} legacyBehavior><a className="nav-link">CV</a></Link></li>
                             : <></>
                         }
                         {caller != "notes"
-                            ? <li className="nav-item"><a className="nav-link" href="/notes">Notes</a></li>
+                            ? <li className="nav-item"><Link href={"/notes"} legacyBehavior><a className="nav-link">Notes</a></Link></li>
                             : <></>
                         }
                     </ul>
-                    <a className="btn btn-primary ms-md-2" role="button" href="/">Home</a>
+                    <Link href={"/"} legacyBehavior><a className="btn btn-primary ms-md-2" role="button">Home</a></Link>
                 </div>
             </div>
         </nav>
