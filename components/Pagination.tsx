@@ -36,7 +36,7 @@ const Pagination: React.FC<PaginationProps> = ({ previousLink, nextLink, current
                                         <a className="page-link">{number}</a>
                                     </Link>
                                 ) : (
-                                    <Link href={`${href}/page${number}`} legacyBehavior>
+                                    <Link href={`${href}?page=${number}`} legacyBehavior>
                                         <a className="page-link">{number}</a>
                                     </Link>
                                 )}

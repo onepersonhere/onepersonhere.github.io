@@ -1,11 +1,11 @@
 import Header from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import NoteSection from '../../components/notes/NoteSection';
 import Pagination from '../../components/Pagination';
 import NoteCard from "@/components/notes/NoteCard";
 import NotesSection from "../../components/notes/NoteSection";
+import {useRouter} from "next/router";
 
-const notes = [
+const notes1 = [
     {
         title: 'CS1101S Programming Methodology',
         grade: 'A',
@@ -56,8 +56,45 @@ const notes = [
         rating: 5,
     },
 ];
+const notes2 = [
+    {
+        title: 'CS2030S Programming Methodology II',
+        grade: 'A-',
+        review: `<p>This module was interesting during my time. We have multiple labs in which we are to write a code that fits the description of the assignment. The code was to be in the style of OOP.</p>
+                 <p>There were 2 practical exams, a midterm and a final exam. Unfortunately, the server was down during the second practical exam and we had to rush as they reduced the exam time by half.</p>
+                 <p>All in all, it is still a doable module as it is a more advanced version of CS1101S.</p>`,
+        link: 'https://github.com/onepersonhere/notes/tree/main/Sem%202/CS2030S',
+        rating: 4,
+    },
+];
+
+const semesters = [
+    {
+        title: 'Semester 1',
+        notes: notes1,
+    },
+    {
+        title: 'Semester 2',
+        notes: notes2,
+    },
+    {
+        title: 'Semester 3',
+        notes: [],
+    },
+    {
+        title: 'Semester 4',
+        notes: [],
+    },
+];
 
 const Note: React.FC = () => {
+    const router = useRouter();
+    // page must be a number
+    const page = parseInt(router.query.page as string) || 1;
+
+    const title = semesters[page - 1].title;
+    const notes = semesters[page - 1].notes;
+
     return (
         <>
             <Header caller={"notes"}/>
@@ -67,7 +104,7 @@ const Note: React.FC = () => {
                         <h1>My notes</h1>
                     </div>
                 </section>
-                <NotesSection>
+                <NotesSection title={title}>
                     {notes.map((note, index) => (
                         <NoteCard
                             key={index}
@@ -82,8 +119,8 @@ const Note: React.FC = () => {
                 </NotesSection>
             </main>
             <Pagination
-                nextLink="/notes/page2"
-                currentPage={1}
+                nextLink={page < 4 ? `/notes?page=${page + 1}` : `/notes`}
+                currentPage={page}
                 totalPages={4}
                 href="/notes"
             />
