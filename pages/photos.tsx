@@ -6,7 +6,7 @@ import PhotoSection from '../components/photos/PhotoSection';
 const Photos: React.FC = () => {
     return (
         <div>
-            <Header />
+            <Header caller={"photos"}/>
             <main>
                 <section>
                     <div className="container">

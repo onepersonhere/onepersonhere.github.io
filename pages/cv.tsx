@@ -18,7 +18,7 @@ const CV: React.FC = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar caller={"cv"}/>
             <main>
                 <Introduction />
                 <WorkExperience />
