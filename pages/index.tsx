@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import {Html} from "next/document";
 
 const Home: React.FC = () => {
     useEffect(() => {
