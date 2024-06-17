@@ -5,7 +5,7 @@ const Navbar: React.FC<{caller: string}> = ({caller}) => {
         <nav className="navbar navbar-expand-md sticky-top bg-dark py-3 navbar-dark">
             <div className="container">
                 <a className="navbar-brand d-flex align-items-center" data-bss-hover-animate="pulse"
-                   href="game/brick_breaker.html">
+                   href="/">
             <span
                 className="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
@@ -34,7 +34,10 @@ const Navbar: React.FC<{caller: string}> = ({caller}) => {
                             ? <li className="nav-item"><a className="nav-link" href="/cv">CV</a></li>
                             : <></>
                         }
-                        <li className="nav-item"><a className="nav-link" href="notes/notes">Notes</a></li>
+                        {caller != "notes"
+                            ? <li className="nav-item"><a className="nav-link" href="/notes">Notes</a></li>
+                            : <></>
+                        }
                     </ul>
                     <a className="btn btn-primary ms-md-2" role="button" href="/">Home</a>
                 </div>

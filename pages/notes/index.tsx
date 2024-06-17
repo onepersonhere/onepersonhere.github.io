@@ -118,6 +118,48 @@ const notes3: Note[] = [
         expanded: true,
     }
 ]
+const notes4: Note[] = [
+    {
+        title: 'CS2103T Software Engineering',
+        review: `<p>I would say this module is pretty easy. I misjudged the difficulty when I started the mod, especially with the IP (Individual Project), in which I put in many of my hours unnecessarily. However, after we proceeded to TP (Team Project), I laid back more as we equally divided the workload to each member.</p>
+                 <p>This may be due to our very experienced leader who led the team to success, who coincidentally is my friend. Our team was relatively strong and hardworking in the programming component, and was pretty cohesive as well.</p>
+                 <p>Our team project is featured on the front page of this website: Minefriends.</p>`,
+        grade: 'A-',
+        rating: 4,
+        link: 'https://github.com/onepersonhere/notes/tree/main/Sem%203/CS2103T',
+    },
+    {
+        title: 'CS2101 Effective Communication for Computing Professionals',
+        review: `<p>This module was twinned with CS2103T. It is compulsory to take this together with the CS2103T.</p>
+                 <p>My class was taught by the module coordinator who is very experienced in this topic. I would feel that we had one of the better teachers as she would make our class exciting and engaging. I feel that I had learned a lot from this course.</p>
+                 <p>However, the grading for the course is largely dependent on the bell curve. People like my friends who had much experience in presentations had honed their presentations well and were able to achieve better grades than people like me whose only experience is PW in JC. That being said, I am actually very shocked at the difference in the quality of presentations from the students in the class.</p>`,
+        rating: 3,
+    },
+    {
+        title: 'CS2100 Computer Organisation',
+        review: `<p>This module was okay at first, however, there were a lot of hiccups along the way as there was a new professor.</p>
+                 <p>All in all, I would say the final paper was what destroyed my grade for this module. The final paper only had 37 points for 50% of the score? And I wasn't able to answer the first portion as it was basically an IQ test for coming up with the solution to the question. In the heat of the moment, I was too anxious to think about the problem properly as I did not expect the difference in the setting of the paper.</p>
+                 <p>(Also, what's up with the missing equation in the first question? ...)</p>`,
+        rating: 2,
+        link: 'https://github.com/onepersonhere/notes/tree/main/Sem%203/CS2100'
+    },
+    {
+        title: 'CS2105 Introduction to Computer Networks',
+        review: `<p>All in all a very good module. I was able to learn the fundamental knowledge of Computer Networks easily as the lectures and exams were not too difficult. Although you need to make sure that you do not make any careless mistakes in the exam like me (which could have cost me my A+).</p>
+                 <p>Anyways, the module was organized into 4 lab assignments, 1 25% midterm, and 1 50% final. The score is 1:1 for each point obtained in the exam and lab.</p>`,
+        grade: 'A',
+        rating: 5,
+        link: 'https://github.com/onepersonhere/notes/tree/main/Sem%203/CS2105'
+    },
+    {
+        title: 'RVN1001 The Great Extinction: rewilding and conservation',
+        review: `<p>This module is no longer offered after my semester. This is because all GEN modules are now 2k in level and no longer CS/CU.</p>
+                 <p>Anyway, the module coordinator who taught the class was very strict in terms of teaching style. And the scores obtained were biased to the likability of the student. On top of that, there was also a lot of heavy physical work (trekking in the jungle during a heavy downpour?!). Therefore, I do not recommend this module.</p>`,
+        grade: 'CS',
+        rating: 1,
+    }
+];
+
 const semesters = [
     {
         title: 'Semester 1',
@@ -136,7 +178,7 @@ const semesters = [
     },
     {
         title: 'Semester 4',
-        notes: [],
+        notes: notes4,
         color: '#ef7a7a',
     },
 ];
@@ -177,6 +219,7 @@ const Note: React.FC = () => {
             </main>
             <Pagination
                 nextLink={page < 4 ? `/notes?page=${page + 1}` : `/notes`}
+                previousLink={page > 1 ? `/notes?page=${page - 1}` : `/notes?page=${semesters.length}`}
                 currentPage={page}
                 totalPages={4}
                 href="/notes"

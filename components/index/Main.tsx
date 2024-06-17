@@ -82,7 +82,7 @@ const Main = () => {
                             </a>
                         </div>
                         <div className="col" data-bss-hover-animate="pulse">
-                            <a className="border-dark" href="photos.html">
+                            <a className="border-dark" href="photos">
                                 <div className="card">
                                     <img className="card-img w-100 d-block" data-bs-toggle="tooltip" data-bss-tooltip="" src="/assets/img/Photos/IMG_8577.jpg" title="I am also a photographer!" />
                                 </div>
@@ -97,13 +97,13 @@ const Main = () => {
                         <div className="col">
                             <div data-aos="fade-up" className="banner" style={{ background: 'var(--bs-blue)' }}>
                                 <p className="fs-1"><strong>Blog</strong><br /></p>
-                                <a className="btn btn-dark btn-lg text-uppercase fw-bold" role="button" data-bss-hover-animate="pulse" id="button-blog" href="blog/blog.html">Vide <i className="fas fa-chevron-right"></i></a>
+                                <a className="btn btn-dark btn-lg text-uppercase fw-bold" role="button" data-bss-hover-animate="pulse" id="button-blog" href="/blog">Vide <i className="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
                         <div className="col">
                             <div data-aos="fade-up" className="banner" style={{ background: 'var(--bs-blue)' }}>
                                 <p className="fs-1"><strong>Notes</strong><br /></p>
-                                <a className="btn btn-dark btn-lg text-uppercase fw-bold" role="button" data-bss-hover-animate="pulse" id="button-notes-1" href="notes/notes.html">Vide <i className="fas fa-chevron-right"></i></a>
+                                <a className="btn btn-dark btn-lg text-uppercase fw-bold" role="button" data-bss-hover-animate="pulse" id="button-notes-1" href="/notes">Vide <i className="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>

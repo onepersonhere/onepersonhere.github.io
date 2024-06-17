@@ -16,9 +16,9 @@ function httpGet(url)
     console.log(`jQuery ${$.fn.jquery} has been loaded successfully!`);
     
     var counter = 0
-    $("#button-cv").on("click", function(){
-        window.alert(httpGet("https://www.example.org/"))
-    })
+    // $("#button-cv").on("click", function(){
+    //     window.alert(httpGet("https://www.example.org/"))
+    // })
   });
   document.head.appendChild(script);
 })();

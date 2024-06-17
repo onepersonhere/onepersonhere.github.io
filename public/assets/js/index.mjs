@@ -45,19 +45,19 @@ async function main() {
           await updateDoc(counterRef, {
             count: curr_count + 1
           });
-        
+
           await $.getJSON('https://api.ipdata.co?api-key=' + apiKey, function(data) {
               const geoRef = doc(db, "ip", data["ip"]);
               setDoc(geoRef, data);
               console.log("Document written with ID: " +  data["ip"]);
           });
         } catch (e) {
-          console.log(e);
+          console.log('error', e);
         }
-        location.href = "cv.html";
+        location.href = "/cv";
     })
   } catch (e) {
-    console.log(e);
+    console.log('error', e);
   } 
 }
 
