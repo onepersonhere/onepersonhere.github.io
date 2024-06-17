@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BlogPost from '../../components/blog/BlogPost';
-import Pagination from '../../components/blog/Pagination';
+import Pagination from '../../components/Pagination';
 
 const Blog2: React.FC = () => {
     return (

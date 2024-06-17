@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BlogPost from '../../components/blog/BlogPost';
-import Pagination from '../../components/blog/Pagination';
+import Pagination from '../../components/Pagination';
 
 const Blog: React.FC = () => {
     const content = `
@@ -35,6 +35,7 @@ const Blog: React.FC = () => {
                     nextLink="/blog/page2"
                     currentPage={1}
                     totalPages={2}
+                    href="/blog"
                 />
             </main>
             <Footer />

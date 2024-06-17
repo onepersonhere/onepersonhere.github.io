@@ -6,9 +6,10 @@ interface PaginationProps {
     nextLink?: string;
     currentPage: number;
     totalPages: number;
+    href: string;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ previousLink, nextLink, currentPage, totalPages }) => {
+const Pagination: React.FC<PaginationProps> = ({ previousLink, nextLink, currentPage, totalPages, href }) => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i);
@@ -31,11 +32,11 @@ const Pagination: React.FC<PaginationProps> = ({ previousLink, nextLink, current
                         {pageNumbers.map(number => (
                             <li key={number} className={`page-item ${number === currentPage ? 'active' : ''}`}>
                                 {number === 1 ? (
-                                    <Link href="/blog" legacyBehavior>
+                                    <Link href={`${href}`} legacyBehavior>
                                         <a className="page-link">{number}</a>
                                     </Link>
                                 ) : (
-                                    <Link href={`/blog/page${number}`} legacyBehavior>
+                                    <Link href={`${href}/page${number}`} legacyBehavior>
                                         <a className="page-link">{number}</a>
                                     </Link>
                                 )}
