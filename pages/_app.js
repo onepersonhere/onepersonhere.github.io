@@ -8,7 +8,8 @@ import '../public/assets/css/renderCanvas.css';
 import '../public/assets/css/styles.css';
 import '../styles/globals.css';
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
@@ -44,7 +45,17 @@ function MyApp({ Component, pageProps }) {
         loadScripts();
     }, []);
 
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <Head>
+                <title>onepersonhere</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content="portfolio" />
+                <link rel="icon" href="/assets/img/Logos/favicon-32x32.png" />
+            </Head>
+            <Component {...pageProps} />
+        </>
+    );
 }
 
 export default MyApp;

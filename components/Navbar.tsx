@@ -22,10 +22,17 @@ const Navbar: React.FC<{caller: string}> = ({caller}) => {
                 </button>
                 <div className="collapse navbar-collapse" id="navcol-5">
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item"><a className="nav-link active" href="blog/blog">Blog</a></li>
-                        { caller != "photos"
+                        { caller != "blog"
+                            ? <li className="nav-item"><a className="nav-link active" href="/blog">Blog</a></li>
+                            : <li className="nav-item"><a className="nav-link active" href="/photos">Photos</a></li>
+                        }
+                        {caller != "photos" && caller != "blog"
                             ? <li className="nav-item"><a className="nav-link" href="/photos">Photos</a></li>
-                            : <li className="nav-item"><a className="nav-link" href="/cv">CV</a></li>
+                            : <></>
+                        }
+                        {caller != "cv"
+                            ? <li className="nav-item"><a className="nav-link" href="/cv">CV</a></li>
+                            : <></>
                         }
                         <li className="nav-item"><a className="nav-link" href="notes/notes">Notes</a></li>
                     </ul>

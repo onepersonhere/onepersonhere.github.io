@@ -5,6 +5,7 @@ import Main from '../components/index/Main';
 import Footer from '../components/Footer';
 
 import React, { useEffect } from 'react';
+// @ts-ignore
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -14,12 +15,6 @@ const Home: React.FC = () => {
     }, []);
     return(
         <>
-            <Head>
-                <title>onepersonhere</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content="portfolio" />
-                <link rel="icon" href="/assets/img/Logos/favicon-32x32.png" />
-            </Head>
             <Header />
             <Main />
             <Footer />
