@@ -5,7 +5,16 @@ import NoteCard from "@/components/notes/NoteCard";
 import NotesSection from "../../components/notes/NoteSection";
 import {useRouter} from "next/router";
 
-const notes1 = [
+interface Note {
+    title: string;
+    grade?: string;
+    review: string;
+    link?: string;
+    rating: number;
+    expanded?: boolean;
+}
+
+const notes1: Note[] = [
     {
         title: 'CS1101S Programming Methodology',
         grade: 'A',
@@ -56,7 +65,7 @@ const notes1 = [
         rating: 5,
     },
 ];
-const notes2 = [
+const notes2: Note[] = [
     {
         title: 'CS2030S Programming Methodology II',
         grade: 'A-',
@@ -66,24 +75,69 @@ const notes2 = [
         link: 'https://github.com/onepersonhere/notes/tree/main/Sem%202/CS2030S',
         rating: 4,
     },
+    {
+        title: 'CS2040S Data Structures and Algorithms',
+        grade: 'A',
+        review: `<p>This module was incredibly difficult and with the time I spent studying on this module, it could be said that it was not worth it. This was largely because the module teaches you about the theory behind common algorithms and data structures, while they test on how you manipulate them.</p>
+                 <p>Hence, you need to master not just the theory, but also the practical aspect of applying the algorithms and data structures. One good way of practicing this aspect is to grind leetcode/hackerrank.</p>`,
+        link: 'https://github.com/onepersonhere/notes/tree/main/Sem%202/CS2040S',
+        rating: 2,
+    },
+    {
+        title: 'GEA1000 Quantitative Reasoning with Data',
+        review: `<p>This module has a horrible bell-curve. Everyone is expected to get full marks and there are multiple students who cheated in a group. I personally know some of these students (although I did not cheat) and I believe it is very common in NUS.</p>
+                 <p>The module content was relatively simple and many topics were already covered in CS1231S (under probability). However, there were group projects and in-class quizzes which make it very hard to maintain your position in the bell-curve.</p>`,
+        link: 'https://github.com/onepersonhere/notes/tree/main/Sem%202/GEA1000',
+        rating: 1,
+    },
+    {
+        title: 'MA2001 Linear Algebra I',
+        review: `<p>Content was relatively easy to understand at first, but much harder as you progress. I was having trouble keeping up with the lessons due to the amount of time I dedicate to CS2040S. However, luckily the final exam was relatively easy as most of the questions were calculation rather than theory. This means that even with my terrible (25th percentile) mid-terms, I was still able to maintain my position in the bell-curve.</p>`,
+        link: 'https://github.com/onepersonhere/notes/tree/main/Sem%202/MA2001',
+        rating: 4,
+    },
+    {
+        title: 'RVSS1002 Feeding the belly of a nation',
+        review: `<p>This module was relatively interesting as it is considered "chill". This means that I put in very little effort to the module.</p>
+                 <p>The module was mainly about Singapore's food culture, i.e. Hawker food, farms, government policies on food. Most of the assignments were group work (except for the individual essay and reflection).</p>
+                 <p>
+                    * Take note that both the module coordinator and the lecturer has been changed and the syllabus is no longer the same.
+                 </p>`,
+        rating: 3,
+    }
 ];
-
+const notes3: Note[] = [
+    {
+        title: 'CP2106 Independent Software Development Project (Orbital)',
+        grade: 'CS (Artemis)',
+        review: `<p>NUS Orbital 2022 was very fun and engaging.</p>
+                 <p>Both my friend and I teamed up to build a game from scratch; at first, we had troubles with choosing the correct game engine, however, we decided on the Godot engine as we believe it's the easiest engine to learn in the short span of 3 months (compared to Unity or Unreal) and we would spend more time building the game rather than learning the engine.</p>
+                 <p>Thankfully, our Artemis level has been maintained throughout the 3 milestones. This was largely due to the fact that I had put in a lot of effort on the documentation of the game itself.</p>`,
+        rating: 5,
+        link: 'https://docs.google.com/document/d/1wQjGsiPLWeSY_6v22aFV54N9r4aaHnMU-TmhsJElN44/edit#',
+        expanded: true,
+    }
+]
 const semesters = [
     {
         title: 'Semester 1',
         notes: notes1,
+        color: 'rgba(var(--bs-info-rgb))',
     },
     {
         title: 'Semester 2',
         notes: notes2,
+        color: '#aa82f2',
     },
     {
-        title: 'Semester 3',
-        notes: [],
+        title: 'Summer 1',
+        notes: notes3,
+        color: '#82f2a8',
     },
     {
         title: 'Semester 4',
         notes: [],
+        color: '#ef7a7a',
     },
 ];
 
@@ -94,6 +148,7 @@ const Note: React.FC = () => {
 
     const title = semesters[page - 1].title;
     const notes = semesters[page - 1].notes;
+    const color = semesters[page - 1].color;
 
     return (
         <>
@@ -101,19 +156,21 @@ const Note: React.FC = () => {
             <main>
                 <section>
                     <div className="container">
-                        <h1>My notes</h1>
+                        <h1>NUS course review</h1>
                     </div>
                 </section>
                 <NotesSection title={title}>
                     {notes.map((note, index) => (
                         <NoteCard
                             key={index}
-                            index={index}
+                            index={page * 10 + index}
                             title={note.title}
                             grade={note.grade}
                             review={note.review}
                             link={note.link}
                             rating={note.rating}
+                            color={color}
+                            expanded={note.expanded}
                         />
                     ))}
                 </NotesSection>

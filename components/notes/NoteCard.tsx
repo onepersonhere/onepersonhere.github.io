@@ -7,6 +7,8 @@ interface NoteCardProps {
     review: string;
     link?: string;
     rating: number;
+    color: string;
+    expanded?: boolean;
 }
 
 const FilledStar = () => (
@@ -23,11 +25,11 @@ const EmptyStar = () => (
     </svg>
 );
 
-const NoteCard: React.FC<NoteCardProps> = ({index,  title, grade, review, link, rating }) => (
+const NoteCard: React.FC<NoteCardProps> = ({index,  title, grade, review, link, rating, color, expanded = false}) => (
     <div style={{ marginBottom: '10px', borderWidth: '2px', borderBottomStyle: 'solid' }}>
         <div className="row d-md-flex">
             <div className="col d-flex justify-content-start align-items-center">
-                <strong className="fw-bold text-info" style={{ fontSize: '22px' }}>{title}</strong>
+                <strong className="fw-bold" style={{ fontSize: '22px', color: color}}>{title}</strong>
             </div>
             <div className="col d-flex d-lg-flex justify-content-end align-items-center justify-content-lg-end align-items-lg-center">
                 <div className="row">
@@ -62,8 +64,11 @@ const NoteCard: React.FC<NoteCardProps> = ({index,  title, grade, review, link, 
         <div className="row">
             <div className="col">
                 <div style={{paddingBottom: '4px'}}>
-                    <a className="btn btn-primary btn-sm" data-bs-toggle="collapse" aria-expanded="false"
-                       aria-controls={`collapse-${index}`} href={`#collapse-${index}`} role="button" style={{ fontSize: '16px', paddingLeft: '12px', paddingBottom: '0px', paddingRight: '12px', paddingTop: '0px' }}>Review</a>
+                    <a className="btn btn-primary btn-sm" data-bs-toggle="collapse" aria-expanded={expanded}
+                       aria-controls={`collapse-${index}`} href={`#collapse-${index}`} role="button"
+                       style={{ fontSize: '16px', paddingLeft: '12px', paddingBottom: '0px', paddingRight: '12px', paddingTop: '0px' }}>
+                        Review
+                    </a>
                     <div className="collapse" id={`collapse-${index}`} style={{ paddingTop: '6px' }}>
                         <section>
                             <div dangerouslySetInnerHTML={{__html: review}}/>
