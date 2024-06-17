@@ -3,13 +3,42 @@ import Header from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BlogPost from '../../components/blog/BlogPost';
 import Pagination from '../../components/Pagination';
+import {useRouter} from "next/router";
 
-const Blog: React.FC = () => {
-    const content = `
+interface Blog {
+    title: string;
+    date: string;
+    content: string;
+    imageSrc?: string;
+}
+
+const blog1: Blog = {
+    title: "Hello World",
+    date: "5 December 2022",
+    content: `
         <p>Hello World indeed...</p>
         <p>I spent my entire day on writing this website, finally I am almost done.</p>
         <p>I wish I could complete the website by the time I travel to Penang on Wednesday with my group of Malaysian friends. (They are actually all Malaysian)</p>
-    `;
+    `,
+    imageSrc: "/assets/img/Blog/Hello%20World%20(2).gif"
+};
+
+const blog2: Blog = {
+    title: "Modreg Day",
+    date: "6 December 2022",
+    content: `
+        <p>Today is Modreg round 0. For those who do not know what is Modreg, it is a day where we as NUS students are trying to bid for the modules we want to take next semester.</p>
+        <p>Failure to bid for the correct modules may change the course of my studies...</p>
+        <p>Wish me luck!</p>
+    `
+};
+
+const blogs: Blog[] = [blog1, blog2];
+
+const Blog: React.FC = () => {
+    const router = useRouter();
+    const page = parseInt(router.query.page as string) || 1;
+    const blog = blogs[page - 1];
 
     return (
         <>
@@ -26,14 +55,15 @@ const Blog: React.FC = () => {
                     </div>
                 </section>
                 <BlogPost
-                    title="Hello World"
-                    date="5 December 2022"
-                    content={content}
-                    imageSrc="/assets/img/Blog/Hello%20World%20(2).gif"
+                    title={blog.title}
+                    date={blog.date}
+                    content={blog.content}
+                    imageSrc={blog.imageSrc}
                 />
                 <Pagination
-                    nextLink="/blog/page2"
-                    currentPage={1}
+                    nextLink={page < 2 ? `/blog?page=${page + 1}` : `/blog`}
+                    previousLink={page > 1 ? `/blog?page=${page - 1}` : `/blog?page=${blogs.length}`}
+                    currentPage={page}
                     totalPages={2}
                     href="/blog"
                 />
