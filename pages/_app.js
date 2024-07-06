@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
                 <title>onepersonhere</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content="portfolio" />
-                <link rel="icon" href="/assets/img/Logos/logo.jpeg" />
+                <link rel="icon" href="/assets/img/Logos/logotransparent.png" />
             </Head>
             <Component {...pageProps} />
         </>
