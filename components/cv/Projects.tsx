@@ -21,6 +21,28 @@ const Projects: React.FC = () => (
                             ]}
                         />
                         <Item
+                            title="visual.ai"
+                            organization="Personal"
+                            link="https://github.com/visual-ai-org/visual-ai"
+                            period="June 2024 - July 2024"
+                            details={[
+                                "Project made for TikTok TechJam 2024",
+                                "Visualizes Deep Neural Network models during training."
+                            ]}
+                        />
+                        <Item
+                            title="Stock Analyzer"
+                            organization="Personal"
+                            period="Dec 2021 - Current"
+                            details={[
+                                "Scraped real-time financial data from Yahoo Finance & Finviz to test trading & investment strategies.",
+                                "Statistical analysis for individual stock using Python, Numpy, Pandas, Scipy.",
+                                "Generate the Mean-Variance portfolio, the efficient portfolio frontier using matplotlib together with the tangent portfolio.",
+                                "Calculates the implied volatility of stocks using the Black-Scholes-Merton formula.",
+                                "Generates the Merton-Jump-Diffusion model."
+                            ]}
+                        />
+                        <Item
                             title="@cs_notes_bot"
                             organization="Personal"
                             link="https://t.me/cs_notes_bot"
@@ -29,26 +51,6 @@ const Projects: React.FC = () => (
                                 "A Telegram Bot that is able to provide users with a cloud-storage that handles text messages, images and any other files.",
                                 "Security is implemented in such a way that the retrieval link is set to expire within a set time.",
                                 "It is based on NodeJS and JavaScript and self-hosted using Firebase."
-                            ]}
-                        />
-                        <Item
-                            title="sghomework.me"
-                            organization="Personal"
-                            link="https://sghomework.me/"
-                            period="2021 – Current"
-                            details={[
-                                "Website aims to provide needy secondary/primary school students with free tuition, hosted on GitHub pages.",
-                                "Tuition is provided by a group of NUS student volunteers.",
-                                "Worked on frontend and backend using Bootstrap, JavaScript, and HTML."
-                            ]}
-                        />
-                        <Item
-                            title="Stock Analyzer"
-                            organization="Personal"
-                            period="Dec 2021 - Current"
-                            details={[
-                                "Scraped real-time financial data from Yahoo Finance/Finviz to test trading & investment strategies.",
-                                "Filtered stocks according to certain criteria (DCF) are compiled into excel using Java."
                             ]}
                         />
                         <Item

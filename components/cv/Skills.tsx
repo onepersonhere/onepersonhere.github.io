@@ -15,9 +15,12 @@ const Skills: React.FC = () => (
                                     <div className="col-md-12">
                                         <h3 className="fs-3">Programming Languages</h3>
                                         <SkillItem name="Java" className="text-bg-danger" tooltip="Expert" />
+                                        <SkillItem name="Python" className="text-bg-warning" tooltip="Expert" />
+
                                         <SkillItem name="JavaScript" className="text-bg-warning" tooltip="Intermediate" />
                                         <SkillItem name="C++" className="text-bg-warning" tooltip="Intermediate" />
-                                        <SkillItem name="Python" className="text-bg-warning" tooltip="Intermediate" />
+                                        <SkillItem name="Swift" className="text-bg-warning" tooltip="Intermediate" />
+
                                         <SkillItem name="Bash/Shell" className="text-bg-success" tooltip="Beginner" />
                                         <SkillItem name="C" className="text-bg-success" tooltip="Beginner" />
                                         <SkillItem name="Assembly" className="text-bg-success" tooltip="Beginner" />
@@ -33,7 +36,10 @@ const Skills: React.FC = () => (
                                         <SkillItem name="JavaFX" className="text-bg-warning" tooltip="Intermediate" />
                                         <SkillItem name="Spring Boot" className="text-bg-warning" tooltip="Intermediate" />
                                         <SkillItem name="Swing" className="text-bg-warning" tooltip="Intermediate" />
-                                        <SkillItem name="Node.js" className="text-bg-warning" tooltip="Intermediate" />
+                                        <SkillItem name="NodeJS" className="text-bg-warning" tooltip="Intermediate" />
+                                        <SkillItem name="Flask" className="text-bg-warning" tooltip="Intermediate" />
+                                        <SkillItem name="NextJS" className="text-bg-warning" tooltip="Intermediate" />
+                                        <SkillItem name="XCode" className="text-bg-warning" tooltip="Intermediate" />
                                     </div>
                                 </div>
                             </div>
@@ -54,6 +60,8 @@ const Skills: React.FC = () => (
                                     <div className="col-md-6 col-lg-12">
                                         <h3 className="fs-3">Database</h3>
                                         <SkillItem name="Firebase" className="text-bg-danger" tooltip="Advanced" />
+                                        <SkillItem name="Google Cloud" className="text-bg-danger" tooltip="Advanced" />
+                                        <SkillItem name="MySql" className="text-bg-danger" tooltip="Advanced" />
                                     </div>
                                 </div>
                             </div>

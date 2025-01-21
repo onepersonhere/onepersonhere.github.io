@@ -12,11 +12,11 @@ const Education: React.FC = () => (
                         <Item
                             title="BACHELOR OF COMPUTING, COMPUTER SCIENCE (HONOURS)"
                             organization="NATIONAL UNIVERSITY OF SINGAPORE"
-                            period="Aug 2021 – Jun 2025"
+                            period="Aug 2021 – May 2025"
                             details={[
-                                "Second Major in Quantitative Finance.",
-                                "Specialization in Networking and Distributed Systems.",
-                                "Specialization in Multimedia Information Retrieval."
+                                "Second Major in Quantitative Finance",
+                                "Specialization in Artificial Intelligence",
+                                "Specialization in Networking and Distributed Systems"
                             ]}
                             organizationClassName="text-bg-success"
                         />

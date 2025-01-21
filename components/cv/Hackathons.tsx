@@ -10,7 +10,48 @@ const Hackathons: React.FC = () => (
                 <div className="collapse" id="collapse-5">
                     <div className="row row-cols-1" style={{ paddingRight: '10px', paddingLeft: '10px' }}>
                         <Item
-                            title="WELCOMECTF"
+                            title="WorldQuant BRAIN IQC 2024"
+                            organization="WorldQuant"
+                            period="Mar 2024"
+                            details={[
+                                "Design and backtest multiple trading strategies.",
+                                "Top 20% of all teams globally.",
+                            ]}
+                            organizationClassName="text-bg-primary"
+                        />
+                        <Item
+                            title="NUS-NCS Innovation Challenge, NUS Business Analytics Centre"
+                            organization="NCS"
+                            period="Mar 2024"
+                            details={[
+                                "Led the team in creating a chat bot based on ChatGPT’s OpenAI model using Natural Language Processing (NLP) and Machine Learning (ML) approaches.",
+                                "Backend was done using Python, Frontend was done using Flask.",
+                                "Data processing and annotation on both real-time and static data using Python."
+                            ]}
+                            organizationClassName="text-bg-primary"
+                        />
+                        <Item
+                            title="SNOMED CT Entity Linking Challenge"
+                            organization="SNOMED"
+                            period="Feb 2024"
+                            details={[
+                                "Link spans of text in clinical notes to concepts in the SNOMED CT clinical terminology.",
+                            ]}
+                            organizationClassName="text-bg-primary"
+                        />
+                        <Item
+                            title="9th Engineering Innovation Challenge"
+                            organization="Institution of Engineers, Singapore (IES)"
+                            period="Sept 2023"
+                            link={"https://github.com/onepersonhere/AgriVision_CV"}
+                            details={[
+                                "Finalist",
+                                "Main engineer for computer vision – object identification for the leaves and tracks its growth using opencv.",
+                            ]}
+                            organizationClassName="text-bg-primary"
+                        />
+                        <Item
+                            title="WelcomeCTF"
                             organization="NUS greyhats"
                             period="Jul 2022"
                             details={[

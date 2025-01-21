@@ -13,7 +13,7 @@ const Introduction: React.FC = () => {
                     </div>
                     <div
                         className="col-auto col-md-6 d-flex d-xxl-flex flex-fill justify-content-end align-items-center justify-content-xxl-end align-items-xxl-center">
-                        <a className="btn btn-primary" role="button" href="downloads/Resume_alt.pdf" target="_blank">
+                        <a className="btn btn-primary" role="button" href="downloads/Resume (Alt).pdf" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em"
                                  fill="currentColor">
                                 <path
@@ -27,7 +27,7 @@ const Introduction: React.FC = () => {
                 <div className="row row-cols-1 row-cols-md-2">
                     <div className="col">
                         <img className="rounded w-100 h-100 fit-cover" data-bss-hover-animate="pulse"
-                             style={{minHeight: '300px'}} src="assets/img/Photos/IMG_9440.jpg" alt="IMG_9440"/>
+                             style={{minHeight: '300px'}} src="assets/img/Photos/IMG_2097.jpeg" alt="IMG_2097"/>
                     </div>
                     <div className="col d-flex flex-column justify-content-center p-4">
                         <div

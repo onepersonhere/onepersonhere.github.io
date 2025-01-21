@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="col-md-6 text-center text-md-start py-2">
                         <div>
                             <p className="fs-5 fw-bold mb-0">Created by Michael Kang</p>
-                            <p className="mb-0">© onepersonhere, 2022</p>
+                            <p className="mb-0">© onepersonhere, 2025</p>
                         </div>
                     </div>
                     <div
