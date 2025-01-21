@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from './Item';
 
 const WorkExperience: React.FC = () => (
     <section className="section" style={{ paddingTop: '6px' }}>
@@ -8,71 +9,40 @@ const WorkExperience: React.FC = () => (
                 <a className="btn btn-primary fw-lighter text-bg-info d-inline" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button">Show Content</a>
                 <div className="collapse" id="collapse-1">
                     <div className="row row-cols-1" style={{ paddingRight: '10px', paddingLeft: '10px' }}>
-                        <div className="col" style={{ paddingTop: '26px', paddingBottom: '12px' }}>
-                            <div className="item">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <h3 className="fs-3">JUNIOR TECHNICAL SUPPORT ENGINEER</h3>
-                                        <h4 className="text-uppercase text-bg-info organization">Binance</h4>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <span className="d-md-flex justify-content-md-end align-items-md-start period">Jan 2023 – Current</span>
-                                    </div>
-                                </div>
-                                <ul className="list-group">
-                                    <li className="list-group-item text-bg-secondary"><span>WIP</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
-                            <div className="item">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <h3 className="fs-3">OPERATIONS &amp; LOGISTICS DIRECTOR</h3>
-                                        <h4 className="text-uppercase text-bg-info organization">NUSSU COMMIT</h4>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <span className="d-md-flex justify-content-md-end align-items-md-start period">2022 – Current</span>
-                                    </div>
-                                </div>
-                                <ul className="list-group">
-                                    <li className="list-group-item text-bg-secondary"><span>In charge of maintaining/debugging NUS computers and cloud-based virtual machines.</span></li>
-                                    <li className="list-group-item text-bg-secondary"><span>Managed cell members for duty allocations.</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
-                            <div className="item">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <h3 className="fs-3">FINANCE &amp; LOGISTICS EXCO</h3>
-                                        <h4 className="text-uppercase text-bg-info organization">NUS COMPUTING CLUB, SPORTS CELL</h4>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <span className="d-md-flex justify-content-md-end align-items-md-start period">2021 – Current</span>
-                                    </div>
-                                </div>
-                                <ul className="list-group">
-                                    <li className="list-group-item text-bg-secondary"><span>Organized school events and activities.&nbsp;</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
-                            <div className="item">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <h3 className="fs-3">SIGNAL OPERATOR, SATCOMS&nbsp;</h3>
-                                        <h4 className="text-uppercase text-bg-info organization">SINGAPORE ARMED FORCES</h4>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <span className="d-md-flex justify-content-md-end align-items-md-start period">2019 – 2021 </span></div>
-                                </div>
-                                <ul className="list-group">
-                                    <li className="list-group-item text-bg-secondary"><span>Technical skills in operating signaling, satellite and networking communication equipment.</span></li>
-                                    <li className="list-group-item text-bg-secondary"><span>Trained in CCNA, awarded best signal operator based on exemplary performance in CCNA theory.</span></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <Item
+                            title="JUNIOR TECHNICAL SUPPORT ENGINEER"
+                            organization="Binance"
+                            period="Jan 2023 – Current"
+                            details={["WIP"]}
+                            organizationClassName="text-bg-info"
+                        />
+                        <Item
+                            title="OPERATIONS & LOGISTICS DIRECTOR"
+                            organization="NUSSU COMMIT"
+                            period="2022 – Current"
+                            details={[
+                                "In charge of maintaining/debugging NUS computers and cloud-based virtual machines.",
+                                "Managed cell members for duty allocations."
+                            ]}
+                            organizationClassName="text-bg-info"
+                        />
+                        <Item
+                            title="FINANCE & LOGISTICS EXCO"
+                            organization="NUS COMPUTING CLUB, SPORTS CELL"
+                            period="2021 – Current"
+                            details={["Organized school events and activities."]}
+                            organizationClassName="text-bg-info"
+                        />
+                        <Item
+                            title="SIGNAL OPERATOR, SATCOMS"
+                            organization="SINGAPORE ARMED FORCES"
+                            period="2019 – 2021"
+                            details={[
+                                "Technical skills in operating signaling, satellite and networking communication equipment.",
+                                "Trained in CCNA, awarded best signal operator based on exemplary performance in CCNA theory."
+                            ]}
+                            organizationClassName="text-bg-info"
+                        />
                     </div>
                 </div>
             </div>
