@@ -9,7 +9,8 @@ import {NoteStruct} from "@/types/Notes/NoteStruct";
 
 const Note: React.FC = () => {
     const router = useRouter();
-    const [semesters, setSemesters] = useState<NoteStruct[]>([]);
+    // @ts-ignore
+    const [semesters, setSemesters] = useState<any>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
