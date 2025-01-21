@@ -1,0 +1,15 @@
+{
+  "blogs": [
+    {
+      "title": "Hello World",
+      "date": "5 December 2022",
+      "content": "<p>Hello World indeed...</p><p>I spent my entire day on writing this website, finally I am almost done.</p><p>I wish I could complete the website by the time I travel to Penang on Wednesday with my group of Malaysian friends. (They are actually all Malaysian)</p>",
+      "imageSrc": "/assets/img/Blog/Hello%20World%20(2).gif"
+    },
+    {
+      "title": "Modreg Day",
+      "date": "6 December 2022",
+      "content": "<p>Today is Modreg round 0. For those who do not know what is Modreg, it is a day where we as NUS students are trying to bid for the modules we want to take next semester.</p><p>Failure to bid for the correct modules may change the course of my studies...</p><p>Wish me luck!</p>"
+    }
+  ]
+}

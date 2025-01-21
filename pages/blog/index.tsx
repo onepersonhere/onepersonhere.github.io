@@ -1,42 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BlogPost from '../../components/blog/BlogPost';
 import Pagination from '../../components/Pagination';
-import {useRouter} from "next/router";
-import {BlogStruct} from "@/types/Blog/BlogStruct";
-
-const blog1: BlogStruct = {
-    title: "Hello World",
-    date: "5 December 2022",
-    content: `
-        <p>Hello World indeed...</p>
-        <p>I spent my entire day on writing this website, finally I am almost done.</p>
-        <p>I wish I could complete the website by the time I travel to Penang on Wednesday with my group of Malaysian friends. (They are actually all Malaysian)</p>
-    `,
-    imageSrc: "/assets/img/Blog/Hello%20World%20(2).gif"
-};
-
-const blog2: BlogStruct = {
-    title: "Modreg Day",
-    date: "6 December 2022",
-    content: `
-        <p>Today is Modreg round 0. For those who do not know what is Modreg, it is a day where we as NUS students are trying to bid for the modules we want to take next semester.</p>
-        <p>Failure to bid for the correct modules may change the course of my studies...</p>
-        <p>Wish me luck!</p>
-    `
-};
-
-const blogs: BlogStruct[] = [blog1, blog2];
+import { useRouter } from "next/router";
+import { BlogStruct } from "@/types/Blog/BlogStruct";
 
 const Blog: React.FC = () => {
     const router = useRouter();
+    const [blogs, setBlogs] = useState<BlogStruct[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('/blogs.json')
+            .then(response => response.json())
+            .then(data => {
+                setBlogs(data.blogs);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     const page = parseInt(router.query.page as string) || 1;
     const blog = blogs[page - 1];
 
     return (
         <>
-            <Header  caller={"blog"}/>
+            <Header caller={"blog"} />
             <main>
                 <section>
                     <div className="container">
@@ -55,10 +48,10 @@ const Blog: React.FC = () => {
                     imageSrc={blog.imageSrc}
                 />
                 <Pagination
-                    nextLink={page < 2 ? `/blog?page=${page + 1}` : `/blog`}
+                    nextLink={page < blogs.length ? `/blog?page=${page + 1}` : `/blog`}
                     previousLink={page > 1 ? `/blog?page=${page - 1}` : `/blog?page=${blogs.length}`}
                     currentPage={page}
-                    totalPages={2}
+                    totalPages={blogs.length}
                     href="/blog"
                 />
             </main>
