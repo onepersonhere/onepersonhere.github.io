@@ -15,9 +15,9 @@ const projects = [
         isInternalLink: false
     },
     {
-        href: "http://sghomework.me/",
-        imgSrc: "/assets/img/Index/sghomework.me(1).png",
-        imgTitle: "A volunteering based tuition website",
+        href: "https://github.com/visual-ai-org/visual-ai",
+        imgSrc: "/assets/img/Index/visual-ai.png",
+        imgTitle: "Visualizes NN models during training",
         isInternalLink: false
     },
     {
