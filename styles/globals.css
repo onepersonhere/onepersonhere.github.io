@@ -1,0 +1,29 @@
+.section {
+    margin-bottom: 40px; /* Adjust the value as needed */
+}
+
+.pagination {
+    --bs-pagination-padding-x: 1.7rem;
+    --bs-pagination-padding-y: 0.4rem;
+    --bs-pagination-font-size: 1rem;
+    --bs-pagination-color: var(--bs-white);
+    --bs-pagination-bg: var(--bs-gray-900);
+    --bs-pagination-border-width: 1px;
+    --bs-pagination-border-color: var(--bs-dark);
+    --bs-pagination-border-radius: 0.45rem;
+    --bs-pagination-hover-color: var(--bs-dark);
+    --bs-pagination-hover-bg: var(--bs-white);
+    --bs-pagination-hover-border-color: var(--bs-dark);
+    --bs-pagination-focus-color: var(--bs-dark);
+    --bs-pagination-focus-bg: #e9ecef;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem #0000007b;
+    --bs-pagination-active-color: var(--bs-dark);
+    --bs-pagination-active-bg: var(--bs-white);
+    --bs-pagination-active-border-color: var(--bs-dark);
+    --bs-pagination-disabled-color: var(--bs-white);
+    --bs-pagination-disabled-bg: var(--bs-pagination-disabled-color);
+    --bs-pagination-disabled-border-color: var(--bs-dark);
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
